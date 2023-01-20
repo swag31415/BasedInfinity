@@ -12,12 +12,26 @@
 
 <body>
   <insert-html link="https://swag31415.github.io/Portfolio/inserts/menu.html"></insert-html>
-  <main class="container">
-    <!-- TODO Add body -->
+  <main class="container" id="app">
+    <h1>BasedInfinity</h1>
+    <div class="row">
+      <div class="input-field col s12">
+        <input type="text" class="validate" v-model="num" pattern="^\d+(e\d+)?$">
+        <label>Enter any positive integer</label>
+        <p>Your magic words are: <span v-text="magic_words" class="teal-text"></span></p>
+      </div>
+      <div class="input-field col s12">
+        <input type="text" class="validate" v-model="uwords" pattern="^[a-zA-Z]+( [a-zA-Z]+)*$">
+        <label>Enter your magic words</label>
+        <p>Your number is: <span v-text="gnum"></span></p>
+      </div>
+    </div>
   </main>
   <insert-html link="https://swag31415.github.io/Portfolio/inserts/foot.html"></insert-html>
   <!-- HTML Inserts -->
   <script src="https://swag31415.github.io/Portfolio/js/html_inserts.js"></script>
+  <!-- Vue.js -->
+  <script src="https://unpkg.com/vue@3.2.37/dist/vue.global.prod.js"></script>
   <!-- Our Scripts -->
   <script src="js/main.js"></script>
 </body>
